@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import About
+from . models import About
 
 class AboutModelAdmin(admin.ModelAdmin):
     list_display = ['title', 'timestamp', 'updated']
