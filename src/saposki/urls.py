@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^about/', include('about.urls')),
     url(r'^portrait/', include('portrait.urls')),
     url(r'^crasher/', include('crasher.urls')),
+    url(r'^street/', include('street.urls')),
 ]
