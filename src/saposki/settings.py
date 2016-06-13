@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'about',
     'portrait',
     'crasher',
+    'street',
 ]
 
 MIDDLEWARE_CLASSES = [
