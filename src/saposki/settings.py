@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'posts',
     'about',
     'portrait',
+    'crasher',
 ]
 
 MIDDLEWARE_CLASSES = [
