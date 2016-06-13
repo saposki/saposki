@@ -6,8 +6,9 @@ from django.shortcuts import render
 from . models import About
 
 def about(request):
-    queryset = About.object.all()
+    queryset = About.objects.all()
     context = {
+        'description': queryset,
         'title': 'about'
     }
     return render(request,'about.html', context)
