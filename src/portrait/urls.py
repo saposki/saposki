@@ -6,5 +6,4 @@ from . import views
 
 urlpatterns = [
     url(r'^$', 'portrait.views.portrait'),
-    url(r'^portrait/$', 'portrait.views.portrait'),
 ]

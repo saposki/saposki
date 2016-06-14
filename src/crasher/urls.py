@@ -6,5 +6,4 @@ from . import views
 
 urlpatterns = [
     url(r'^$', 'crasher.views.crasher'),
-    url(r'^crasher/$', 'crasher.views.crasher'),
 ]
