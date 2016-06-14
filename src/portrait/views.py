@@ -12,9 +12,9 @@ def portrait(request):
     return render(request, 'portrait.html', context)
 
 def portrait_detail(request):
-    instance = get_object_or_404(Portait, title="abc")
+    # instance = get_object_or_404(Portait, title="abc")
     context = {
-        'title': instance.title,
-        'instance': instance
+        # 'title': instance.title,
+        # 'instance': instance
     }
     return render(request, 'portrait_detail.html', context)
