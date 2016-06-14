@@ -2,9 +2,12 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-from . import views
+from .views import(
+    portrait,
+    portrait_detail
+)
 
 urlpatterns = [
-    url(r'^$', 'portrait.views.portrait'),
-    url(r'^detail/$', 'portrait.views.portrait_detail'),
+    url(r'^$', portrait),
+    url(r'^detail/$', portrait_detail),
 ]
