@@ -62,17 +62,26 @@ body{
    height:55px;
 }
 .copyright{
+   text-indent: 4em;
    width:50%;
    float:left;
    padding-left: 10px;
 }
 
 .social-media{
-   width:48%;
+   width:42%;
    float:left;
+   padding-right: 4em;
 }
 
 .social-media li{
    padding-left: 10px;
    float: right;
+}
+.year{
+   font-size: 11px;
+}
+.social-media img {
+   width: 25px;
+   height: 25px;
 }
