@@ -10,3 +10,11 @@ def street(request):
         'image' : queryset
     }
     return render(request, 'street.html', context)
+
+def street_detail(request):
+
+    context = {
+
+
+    }
+    return render(request, 'street_detail.html', context)

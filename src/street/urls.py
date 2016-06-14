@@ -6,4 +6,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', 'street.views.street'),
+    url(r'^detail/$', 'street.views.street_detail'),
 ]
