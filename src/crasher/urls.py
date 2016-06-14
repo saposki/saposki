@@ -6,4 +6,5 @@ from . import views
 
 urlpatterns = [
     url(r'^$', 'crasher.views.crasher'),
+    url(r'detail/$', 'crasher.views.crasher_detail'),
 ]
