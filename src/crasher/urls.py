@@ -2,9 +2,12 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-from . import views
+from .views import (
+    crasher,
+    crasher_detail
+)
 
 urlpatterns = [
-    url(r'^$', 'crasher.views.crasher'),
-    url(r'detail/$', 'crasher.views.crasher_detail'),
+    url(r'^$', crasher),
+    url(r'detail/$', crasher_detail),
 ]

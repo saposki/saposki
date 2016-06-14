@@ -2,8 +2,10 @@
 from django.conf.urls import url
 from django.contrib import admin
 
-from . import views
+from .views import (
+    about
+)
 
 urlpatterns = [
-    url(r'^$', 'about.views.about'),
+    url(r'^$', about),
 ]
