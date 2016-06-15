@@ -39,11 +39,13 @@ body{
    width: 50%;
    float: left;
    display: block;
+   padding-left: 3em;
 }
 .nav{
    width: 40%;
    float:right;;
    margin-top: 65px;
+   padding-right: 3em;
 }
 .nav li{
    padding-left: 10px;
@@ -82,6 +84,6 @@ body{
    font-size: 11px;
 }
 .social-media img {
-   width: 25px;
-   height: 25px;
+   width: 20px;
+   height: 20px;
 }
