@@ -7,14 +7,14 @@ from . models import Portrait
 def portrait(request):
     queryset = Portrait.objects.all()
     context = {
-        'image' : queryset
+        'portrait' : queryset
     }
     return render(request, 'portrait.html', context)
 
-def portrait_detail(request):
-    # instance = get_object_or_404(Portait, title="abc")
+def portrait_detail(request, id=None):
+    instance = get_object_or_404(Portrait, id=id)
     context = {
-        # 'title': instance.title,
-        # 'instance': instance
+        'title': instance.title,
+        'instance': instance
     }
     return render(request, 'portrait_detail.html', context)

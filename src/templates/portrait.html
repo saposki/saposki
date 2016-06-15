@@ -1,3 +1,9 @@
-<div>
+
    <h1>portrait</h1>
-</div>
+   {% for i in portrait %}
+   <a href="/portrait/{{i.id}}/">{{i.title}}</a>
+      {{i.image}} <br>
+      {{i.title}} <br>
+      {{i.description}} <br>
+      {{i.id}} <br>
+   {% endfor%}

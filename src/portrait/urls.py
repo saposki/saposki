@@ -9,5 +9,5 @@ from .views import(
 
 urlpatterns = [
     url(r'^$', portrait),
-    url(r'^detail/$', portrait_detail),
+    url(r'^(?P<id>\d+)/$', portrait_detail),
 ]
