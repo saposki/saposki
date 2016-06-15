@@ -1,7 +1,7 @@
 
    <h1>portrait</h1>
    {% for i in portrait %}
-   <a href="/portrait/{{i.id}}/">{{i.title}}</a>
+   <a href='{i.get_absolute_url}'>{{i.title}}</a>
       {{i.image}} <br>
       {{i.title}} <br>
       {{i.description}} <br>
