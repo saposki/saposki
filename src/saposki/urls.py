@@ -21,6 +21,6 @@ urlpatterns = [
     # url(r'^$', include('about.urls')),
     url(r'^about/', include('about.urls')),
     url(r'^portrait/', include('portrait.urls', namespace='portrait')),
-    url(r'^crasher/', include('crasher.urls')),
+    url(r'^crasher/', include('crasher.urls', namespace='crasher')),
     url(r'^street/', include('street.urls')),
 ]

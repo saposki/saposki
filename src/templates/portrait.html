@@ -1,7 +1,7 @@
 
    <h1>portrait</h1>
    {% for obj in portrait %}
-   <a href="{% url 'portrait:detail' id=obj.id %}">{{obj.title}}</a>
+      <a href="{% url 'portrait:detail' id=obj.id %}">{{obj.title}}</a>
       {{obj.image}} <br>
       {{obj.title}} <br>
       {{obj.description}} <br>
