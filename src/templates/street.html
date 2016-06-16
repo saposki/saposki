@@ -1,3 +1,8 @@
-<div>
-   <h1>Street</h1>
-</div>
+<h1>street</h1>
+{% for obj in street %}
+   <a href="{% url 'street:detail' id=obj.id %}">{{obj.title}}</a>
+   {{obj.image}} <br>
+   {{obj.title}} <br>
+   {{obj.description}} <br>
+   {{obj.id}} <br>
+{% endfor %}

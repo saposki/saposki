@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^about/', include('about.urls')),
     url(r'^portrait/', include('portrait.urls', namespace='portrait')),
     url(r'^crasher/', include('crasher.urls', namespace='crasher')),
-    url(r'^street/', include('street.urls')),
+    url(r'^street/', include('street.urls', namespace='street')),
 ]

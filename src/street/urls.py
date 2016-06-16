@@ -8,6 +8,6 @@ from .views import(
 )
 
 urlpatterns = [
-    url(r'^$', street),
-    url(r'^detail/$', street_detail),
+    url(r'^$', street, name='st'),
+    url(r'^(?P<id>\d+)/$', street_detail, name='detail'),
 ]
