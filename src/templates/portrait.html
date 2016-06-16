@@ -1,9 +1,9 @@
 
    <h1>portrait</h1>
-   {% for i in portrait %}
-   <a href='{i.get_absolute_url}'>{{i.title}}</a>
-      {{i.image}} <br>
-      {{i.title}} <br>
-      {{i.description}} <br>
-      {{i.id}} <br>
+   {% for obj in portrait %}
+   <a href="{% url 'portrait:detail' id=obj.id %}">{{obj.title}}</a>
+      {{obj.image}} <br>
+      {{obj.title}} <br>
+      {{obj.description}} <br>
+      {{obj.id}} <br>
    {% endfor%}

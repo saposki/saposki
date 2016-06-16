@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^$', include('about.urls')),
     url(r'^about/', include('about.urls')),
-    url(r'^portrait/', include('portrait.urls')),
+    url(r'^portrait/', include('portrait.urls', namespace='portrait')),
     url(r'^crasher/', include('crasher.urls')),
     url(r'^street/', include('street.urls')),
 ]
