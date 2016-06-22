@@ -56,7 +56,9 @@ body{
 
 .content{
    width: inherit;
-   height: 100px;
+   padding-left: 5em;
+   padding-right: 5em;
+   /*height: 100px;*/
 }
 
 .foot{
