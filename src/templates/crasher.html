@@ -1,3 +1,5 @@
+{% extends "base.html" %}
+
 <h1>crasher</h1>
    {% for obj in crasher %}
       <a href="{% url 'crasher:detail' id=obj.id %}">{{obj.title}}</a>
