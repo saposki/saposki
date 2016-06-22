@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block content %}
 <h1>street</h1>
 {% for obj in street %}
    <a href="{% url 'street:detail' id=obj.id %}">{{obj.title}}</a>
@@ -6,3 +9,5 @@
    {{obj.description}} <br>
    {{obj.id}} <br>
 {% endfor %}
+
+{% endblock content %}
