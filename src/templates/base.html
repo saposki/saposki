@@ -5,6 +5,9 @@
    <head>
       <title>{% block head_title %} saposki{% endblock head_title %}</title>
       <link rel="stylesheet" href="{% static "css/style.css" %}">
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.js"></script>
    </head>
    <body>
          <div class='top clearfix'>
@@ -49,5 +52,6 @@
                </ul>
             </div><!--end social-media  -->
          </div> <!--end foot-->
+   <script src="{% static "javascript/script.js" %}"></script>
 </body>
 </html>

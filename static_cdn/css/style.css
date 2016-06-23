@@ -1,0 +1,95 @@
+
+
+.element	{ font-size:65px;
+
+   position:absolute;
+   font-family:"Helvetica Neue";
+   font-weight:bold;
+   margin-top: 0;
+}
+
+#element-1		{ color:lightblue; margin:30px 0 0 10px; z-index:1; opacity: 0.75}
+#element-2		{ color:lightgreen; margin:30px 0 0 30px; z-index:2; opacity: 0.75}
+#element-3		{ color:pink; margin:30px 0 0 65px; z-index:3; opacity: 0.75}
+#element-4		{ color:yellow; margin:30px 0 0 90px; z-index:4; opacity: 0.75}
+#element-5		{ color:orange; margin:30px 0 0 125px; z-index:5; opacity: 0.75}
+#element-6		{ color:gray; margin:30px 0 0 155px; z-index:6; opacity: 0.75}
+#element-7		{ color:gray; margin:30px 0 0 191px; z-index:7; opacity: 0.75}
+
+
+a, li, .foot{
+   text-decoration: none;
+   list-style: none;
+   color:gray;
+   font-family: 'Helvetica Neue';
+   font-weight: 100;
+   font-size: 13px;
+}
+body{
+   width: 100%;
+   margin: 0 auto;
+}
+.top{
+   width:100%;
+   height: 100px;
+   background-color: #F9F9F9;
+}
+
+.logo{
+   width: 50%;
+   float: left;
+   display: block;
+   padding-left: 3em;
+}
+.nav{
+   /*position: absolute;*/
+   width: 45%;
+   float:right;
+   margin-top: 65px;
+   padding-right: 3em;
+}
+.nav li{
+   padding-left: 10px;
+   float: right;
+   padding-right: 10px;
+}
+
+.content{
+   width: inherit;
+   padding-left: 5em;
+   padding-right: 5em;
+   /*height: 100px;*/
+}
+
+.foot{
+   padding-top: 10px
+   width:100%;
+   height:55px;
+}
+.copyright{
+   text-indent: 4em;
+   width:50%;
+   float:left;
+   padding-left: 10px;
+}
+
+.social-media{
+   width:42%;
+   float:left;
+   padding-right: 4em;
+}
+
+.social-media li{
+   padding-left: 10px;
+   float: right;
+}
+.year{
+   font-size: 11px;
+}
+.copy{
+   font-size: 11;
+}
+.social-media img {
+   width: 15px;
+   height: 15px;
+}
