@@ -3,11 +3,16 @@
 {% block content %}
    <h1>portrait</h1>
    {% for obj in portrait %}
+
+      {%if obj.image %}
+         <img src="{{obj.image.url}}" alt="">
+      {% endif %}
+
       <a href="{% url 'portrait:detail' id=obj.id %}">{{obj.title}}</a>
-      {{obj.image}} <br>
-      {{obj.title}} <br>
-      {{obj.description}} <br>
-      {{obj.id}} <br>
+      <!-- {{obj.image}} <br> -->
+      <!-- {{obj.title}} <br> -->
+      <!-- {{obj.description}} <br> -->
+      <!-- {{obj.id}} <br> -->
    {% endfor%}
-   
+
 {% endblock content %}
