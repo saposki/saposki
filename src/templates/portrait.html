@@ -5,10 +5,12 @@
    {% for obj in portrait %}
 
       {%if obj.image %}
-         <img src="{{obj.image.url}}" alt="">
+      <div class="thumbnail">
+         <a href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
+      </div>
+      <br>
       {% endif %}
 
-      <a href="{% url 'portrait:detail' id=obj.id %}">{{obj.title}}</a>
       <!-- {{obj.image}} <br> -->
       <!-- {{obj.title}} <br> -->
       <!-- {{obj.description}} <br> -->
