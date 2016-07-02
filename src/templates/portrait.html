@@ -1,14 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-   <h1>portrait</h1>
+   <!-- <h1>portrait</h1> -->
    {% for obj in portrait %}
 
       {%if obj.image %}
       <div class="thumbnail">
          <a href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
       </div>
-      <br>
       {% endif %}
 
       <!-- {{obj.image}} <br> -->
