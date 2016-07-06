@@ -1,17 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>crasher</h1>
+<!-- <h1>crasher</h1> -->
    {% for obj in crasher %}
-      <a href="{% url 'crasher:detail' id=obj.id %}">{{obj.title}}</a>
-      {{obj.image}} <br>
-      {{obj.title}} <br>
-      {{obj.description}} <br>
-      {{obj.id}} <br>
+
+   {% if obj.image %}
+      <li>
+         <a class="thumbnail" href="{% url 'crasher:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
+      </li>
+
+   {% endif %}
+
+      <!-- {{obj.image}} <br> -->
+      <!-- {{obj.title}} <br> -->
+      <!-- {{obj.description}} <br> -->
+      <!-- {{obj.id}} <br> -->
    {% endfor %}
-
-   <!-- <div ng-app="GalleryApp">
-
-   </div> -->
 
 {% endblock content %}
