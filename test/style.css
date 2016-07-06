@@ -1,0 +1,15 @@
+body{
+   width:960px;
+   position: relative;
+}
+.gallery{
+   position: relative;
+}
+li{
+   list-style: none;
+   float: left;
+}
+.foot{
+   width:100%;
+   float: left;
+}
