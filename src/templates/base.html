@@ -34,9 +34,11 @@
 
 
          <div class='content'>
-            {% block content %}
+            <ul>
+               {% block content %}
 
-            {% endblock content %}
+               {% endblock content %}
+            </ul>
          </div><!--end content  -->
 
          <div class='foot'>
@@ -52,6 +54,6 @@
                </ul>
             </div><!--end social-media  -->
          </div> <!--end foot-->
-   <script src="{% static "javascript/script.js" %}"></script>
 </body>
+<script src="{% static "javascript/script.js" %}"></script>
 </html>

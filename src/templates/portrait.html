@@ -5,9 +5,12 @@
    {% for obj in portrait %}
 
       {%if obj.image %}
-      <div class="thumbnail">
-         <a href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
-      </div>
+      <!-- <div class="thumbnail"> -->
+         <li>
+            <a class="thumbnail" href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
+
+         </li>
+      <!-- </div> -->
       {% endif %}
 
       <!-- {{obj.image}} <br> -->
