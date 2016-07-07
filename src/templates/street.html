@@ -1,13 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>street</h1>
 {% for obj in street %}
-   <a href="{% url 'street:detail' id=obj.id %}">{{obj.title}}</a>
-   {{obj.image}} <br>
-   {{obj.title}} <br>
-   {{obj.description}} <br>
-   {{obj.id}} <br>
+   {% if obj.image %}
+      <li>
+         <a class="thumbnail gallery"href="{% url 'street:detail' id=obj.id %}"><img src="{{ obj.image.url }}" alt=""></a>
+      </li>
+   {% endif %}
 {% endfor %}
 
 {% endblock content %}

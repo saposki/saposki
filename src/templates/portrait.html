@@ -7,7 +7,7 @@
       {%if obj.image %}
       <!-- <div class="thumbnail"> -->
          <li>
-            <a class="thumbnail" href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
+            <a class="thumbnail gallery" href="{% url 'portrait:detail' id=obj.id %}"><img src="{{obj.image.url}}" alt=""></a>
 
          </li>
       <!-- </div> -->

@@ -4,13 +4,13 @@
 <div>
    <!-- <h1>{{instance.title}}</h1> -->
    {% if instance.image %}
-      <div class='portrait'>
+      <div class="portrait">
          <img src='{{ instance.image.url}}' />
       </div>
       <div class="description">
          {{instance.description}}
       </div>
    {% endif %}
-      <!-- {{ instance.title }} -->
 </div>
+
 {% endblock content %}
