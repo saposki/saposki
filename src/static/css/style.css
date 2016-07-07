@@ -106,7 +106,7 @@ body{
    padding-right: 10px;
 }
 .portrait, .crasher, .street{
-   width: 70%;
+   width: 600px;
    float:left;
 }
 
@@ -114,13 +114,16 @@ body{
    max-width: 97%;
 }
 .description{
-   width:25%;
+   font-style:italic;
+   padding: 25px;
+   margin:10% auto;
+   width:250px;
    float:left;
 }
 
 .about{
    padding:25px;
 }
-.cloader{
+.postcard{
    width:900px;
 }

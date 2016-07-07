@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div>
+<div class="postcard">
    <!-- <h1>street details</h1> -->
    {% if instance.image %}
-   <div class="cloader">
+
       <div class="crasher">
          <img src="{{ instance.image.url }}" />
       </div>
@@ -12,8 +12,6 @@
          {{ instance.description }}
       </div>
 
-
-   </div>
    {% endif %}
 </div>
 
