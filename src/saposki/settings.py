@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import datetime
+import dj_database_url
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +27,7 @@ SECRET_KEY = 'o+3%zf1%u(4tjer5u_%kkhb(n38q2xqs*soq$h4@j4*gpn2iq2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -42,6 +44,8 @@ INSTALLED_APPS = [
     'portrait',
     'crasher',
     'street',
+    'storages',
+    'boto',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -82,11 +86,11 @@ WSGI_APPLICATION = 'saposki.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'saposki',
-        'USER': 'saposkiuser',
-        'PASSWORD': 'sappskipassword',
-        'HOST': 'localhost',
-        'PORT': '',
+        # 'NAME': 'saposki',
+        # 'USER': 'saposkiuser',
+        # 'PASSWORD': 'sappskipassword',
+        # 'HOST': 'localhost',
+        # 'PORT': '',
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
@@ -131,6 +135,31 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+access_key = 'AKIAJVESQIIMDC6IT5BA'
+secret_key = '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'
+
+AWS_ACCESS_KEY_ID = access_key
+AWS_SECRET_ACCESS_KEY = secret_key
+
+AWS_STORAGE_BUCKET_NAME = 'saposki'
+
+STATICFILES_STORAGE = 'saposki.s3utils.StaticRootS3BotoStorage'
+DEFAULT_FILE_STORAGE = 'saposki.s3utils.MediaRootS3BotoStorage'
+
+S3_URL = '//%s.s3.amazonaws.com/' %AWS_STORAGE_BUCKET_NAME
+MEDIA_URL = S3_URL + "media/"
+STATIC_URL = S3_URL + "static/"
+ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
+
+date_two_months_later = datetime.date.today() + datetime.timedelta(2 * 365 / 12)
+expires = date_two_months_later.strftime("%A, %d %B %Y 20:00:00 GMT")
+
+AWS_HEADERS = {
+    'Expires': expires,
+    'Cache-Control': 'max-age=86400',
+}
+
+
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     # '/var/www/static/',
@@ -146,16 +175,16 @@ MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media_cdn")
 # # DATABASES = { 'default' : dj_database_url.config()}
 #
 # # Honor the 'X-Forwarded-Proto' header for request.is_secure()
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 #
 # # Allow allhost headers
 # ALLOWED_HOSTS  = ['*']
 #
-# # try to load local_settings.py if it exists
-# try:
-#   from local_settings import *
-# except Exception as e:
-#   pass
+# try to load local_settings.py if it exists
+try:
+  from local_settings import *
+except Exception as e:
+  pass
 
 # DATABASES = {
 #     "default": {
