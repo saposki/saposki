@@ -1,0 +1,4 @@
+saposki
+*.pyc
+staticfiles
+.env
